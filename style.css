@@ -16,10 +16,13 @@ body{
     justify-content: center;
 }
 .quote-container{
-    box-shadow: #000;
-    border: #000;
-    border-radius: 2px;
-    margin: 3px;
+    width: auto;
+    max-width: 900px;
+
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 10px;
+    padding: 20px 30px;
 }
 .quote-text{
     size: 50;
