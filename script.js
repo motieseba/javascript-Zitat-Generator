@@ -1,8 +1,22 @@
 const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
+const loader = document.getElementById("loader");
+const quateContainer = document.getElementById("quote-container");
+
+function loading() {
+    loader.hidden = false;
+    quateContainer.hidden = true;
+}
+function complete() {
+    if(!loader.hidden){
+        quateContainer.hidden = false;
+        loader.hidden = true ;
+    }
+}
 //get quate from api
 
 async function getQuote(){
+    loading();
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     const apiUrl = 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
     try {
@@ -21,6 +35,7 @@ async function getQuote(){
             
         }
         document.getElementById("quote").innerText = data.quoteText;
+        complete();
     } catch (error) {
         getQuote(); 
         console.log('whoops error no quote',error);
