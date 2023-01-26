@@ -15,3 +15,12 @@ body{
     align-items: center;
     justify-content: center;
 }
+.quote-container{
+    box-shadow: #000;
+    border: #000;
+    border-radius: 2px;
+    margin: 3px;
+}
+.quote-text{
+    size: 50;
+}
