@@ -33,10 +33,12 @@ function tweetquote() {
     const twitterUrl = 'https://twitter.com/intent/tweet?text='+quote+' - '+author;
     window.open(twitterUrl, '_blank');
 }
-
+function setUrl() {
+    document.getElementById("fb-share").setAttribute( 'data-href', document.URL);
+}
 
 // event listner
-document.getElementById("facebook").addEventListener('click', document.getElementById("facebook").setAttribute( 'data-href',window.location.href));
+document.getElementById("facebook").addEventListener('click', setUrl);
 document.getElementById("new-quote").addEventListener('click', getQuote);
 document.getElementById("twitter").addEventListener('click', tweetquote);
 //On load
