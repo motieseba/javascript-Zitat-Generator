@@ -38,8 +38,9 @@ function setUrl() {
 }
 
 // event listner
-document.getElementById("facebook").addEventListener('click', setUrl);
+//document.getElementById("facebook").addEventListener('click', setUrl);
 document.getElementById("new-quote").addEventListener('click', getQuote);
 document.getElementById("twitter").addEventListener('click', tweetquote);
 //On load
+document.getElementById("fb-share").setAttribute( 'data-href', document.URL);
 getQuote();
