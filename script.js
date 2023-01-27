@@ -69,5 +69,4 @@ document.getElementById("new-quote").addEventListener('click', getQuote);
 document.getElementById("twitter").addEventListener('click', tweetquote);
 copyBtn.addEventListener("click", ()=>{navigator.clipboard.writeText(quoteText.innerText);});
 //On load
-document.getElementById("fb-share").setAttribute( 'data-href', document.URL);
 getQuote();
